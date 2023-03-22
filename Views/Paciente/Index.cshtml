@@ -1,0 +1,66 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IEnumerable<LAB03_ED1_G.Models.Paciente>
+
+<title>Sala de espera | Hospital</title>
+
+<body>
+    <div style="padding-left:50px; padding-right:50px;">
+        <br />
+        <h4>Pacientes en espera</h4>
+
+        <a asp-action="Create">Agregar paciente</a>
+
+        <br />
+        <form asp-action="Delete" method="post">
+            <p align="right">
+                <button type="submit" class="btn btn-outline-success">Atender paciente</button>
+            </p>
+        </form>
+        <br />
+        <table class="table">
+            <thead style="background-color: #293241 ">
+                <tr>
+                    <th style="color:aliceblue">Nombres</th>
+                    <th style="color:aliceblue">Apellidos</th>
+                    <th style="color:aliceblue">Fecha de nacimiento</th>
+                    <th style="color:aliceblue">Sexo</th>
+                    <th style="color:aliceblue">Especialización a utilizar</th>
+                    <th style="color:aliceblue">Método de ingreso</th>
+                    <th style="color:aliceblue"> </th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nombres)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Apellidos)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FDNacimiento)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Sexo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Especializacion)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.MIngreso)
+                        </td>
+                        <td>
+                            @* @Html.ActionLink("Editar", "Edit", new {id = item.Nombres}) |*@
+                            @Html.ActionLink("Info", "Details", new { id = item.Nombres })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>

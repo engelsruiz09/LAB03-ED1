@@ -1,11 +1,19 @@
 ﻿using LAB03_ED1_G.Models;
 using LAB03_ED1_G.Models.Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualBasic.FileIO;
+using System.Diagnostics;
+using System;
 
 namespace LAB03_ED1_G.Controllers
 {
     public class PacienteController : Controller
     {
+        private IWebHostEnvironment Environment;
+        public PacienteController(IWebHostEnvironment _environment)
+        {
+            Environment = _environment;
+        }
         public IActionResult Index()
         {
             return View(Singleton.Instance.Pacientes.GetList());
@@ -44,6 +52,70 @@ namespace LAB03_ED1_G.Controllers
             catch
             {
                 return View();
+            }
+        }
+        public ActionResult CargarArchivo(IFormFile File)
+        {
+            Stopwatch timer = new Stopwatch();
+            timer.Start();
+            string Nombre = "", Apellido = "", Sexo = "", Especializacion = "", MetodoIngreso = "";
+            DateTime FechaNac;
+
+            try
+            {
+
+                if (File != null)
+                {
+                    string path = Path.Combine(this.Environment.WebRootPath, "Uploads");
+                    if (!Directory.Exists(path))
+                    {
+                        Directory.CreateDirectory(path);
+                    }
+                    string FileName = Path.GetFileName(File.FileName);
+                    string FilePath = Path.Combine(path, FileName);
+                    using (FileStream stream = new FileStream(FilePath, FileMode.Create))
+                    {
+                        File.CopyTo(stream);
+                    }
+                    using (TextFieldParser csvFile = new TextFieldParser(FilePath))
+                    {
+
+                        csvFile.CommentTokens = new string[] { "#" };
+                        csvFile.SetDelimiters(new string[] { "," });
+                        csvFile.HasFieldsEnclosedInQuotes = true;
+
+                        csvFile.ReadLine();
+
+                        while (!csvFile.EndOfData)
+                        {
+                            string[] fields = csvFile.ReadFields();
+                            Nombre = Convert.ToString(fields[0]);
+                            Apellido = Convert.ToString(fields[1]);
+                            FechaNac = Convert.ToDateTime(fields[2]);
+                            Sexo = Convert.ToString(fields[3]);
+                            Especializacion = Convert.ToString(fields[4]);
+                            MetodoIngreso = Convert.ToString(fields[5]);
+                            Paciente nuevopaciente = new Paciente
+                            {
+                                Nombres = Nombre,
+                                Apellidos = Apellido,
+                                FDNacimiento = FechaNac,
+                                Sexo = Sexo,
+                                Especializacion = Especializacion,
+                                MIngreso = MetodoIngreso,
+
+                            };
+                            //Singleton.Instance.AVL.Add(nuevoVehiculo); arreglar cuando este el heap
+                        }
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception)
+            {
+                ViewData["Message"] = "Algo sucedio mal";
+                return RedirectToAction(nameof(Index));
+
             }
         }
     }
