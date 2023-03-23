@@ -109,12 +109,12 @@ namespace LAB03_ED1_G.Controllers
                         }
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Create));
             }
             catch (Exception)
             {
                 ViewData["Message"] = "Algo sucedio mal";
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Create));
 
             }
         }
