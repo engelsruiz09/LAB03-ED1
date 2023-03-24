@@ -16,7 +16,8 @@ namespace LAB03_ED1_G.Controllers
         }
         public IActionResult Index()
         {
-            return View(Singleton.Instance.Pacientes.GetList());
+            return View();
+            //return View(Singleton.Instance.Pacientes.GetList());      arreglar despues
         }
 
         public ActionResult Create() 
@@ -56,8 +57,6 @@ namespace LAB03_ED1_G.Controllers
         }
         public ActionResult CargarArchivo(IFormFile File)
         {
-            Stopwatch timer = new Stopwatch();
-            timer.Start();
             string Nombre = "", Apellido = "", Sexo = "", Especializacion = "", MetodoIngreso = "";
             DateTime FechaNac;
 
