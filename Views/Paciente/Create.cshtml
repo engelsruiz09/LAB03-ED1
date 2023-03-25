@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato&family=Lora:wght@500&family=Noto+Serif&family=Quicksand:wght@500&display=swap" rel="stylesheet">
 
-<form asp-action="CargarArchivo" method="post" enctype="multipart/form-data">
+@*<form asp-action="CargarArchivo" method="post" enctype="multipart/form-data">
     <div class="mb-3">
         <label for="formFile" class="form-label">Aqui se muestra el archivo  a importar</label>
         <input type="file" name="postedFile" class="form-control" id="formFile" />
@@ -19,6 +19,10 @@
         </center>
         
     </div>
+</form>*@
+<form asp-action="CargarArchivo" method="post" enctype="multipart/form-data" class="form-inline mb-3">
+    <input class="form-control" type="file" name="File" />
+    <input class="btn btn-outline-primary" type="submit" value="Importar" />
 </form>
 
 <body>
@@ -40,31 +44,59 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var item in Model)
+                    @if(Model == null)
                     {
                         <tr>
                             <td>
-                                @Html.DisplayFor(modelItem => item.Nombres)
                             </td>
                             <td>
-                                @Html.DisplayFor(modelItem => item.Apellidos)
+
                             </td>
                             <td>
-                                @Html.DisplayFor(modelItem => item.FDNacimiento)
+
                             </td>
                             <td>
-                                @Html.DisplayFor(modelItem => item.Sexo)
+
                             </td>
                             <td>
-                                @Html.DisplayFor(modelItem => item.Especializacion)
+
                             </td>
                             <td>
-                                @Html.DisplayFor(modelItem => item.MIngreso)
+
                             </td>
                             <td>
                             </td>
                         </tr>
                     }
+                    else
+                    {
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Nombres)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Apellidos)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.FDNacimiento)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Sexo)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Especializacion)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.MIngreso)
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+                        }
+                    }
+
 
                 </tbody>
             </table>

@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualBasic.FileIO;
 using System.Diagnostics;
 using System;
+using static LAB03_ED1_G.Models.Paciente;
 
 namespace LAB03_ED1_G.Controllers
 {
@@ -45,7 +46,7 @@ namespace LAB03_ED1_G.Controllers
                 aux = Convert.ToDateTime(newPaciente.FDNacimiento);
                 edad = DateTime.Today.AddTicks(-aux.Ticks).Year - 1;
                 prioridad = newPaciente.Delegado(newPaciente.Sexo, edad, newPaciente.Especializacion, newPaciente.MIngreso);
-                //Singleton.Instance.Pacientes.Add(newPaciente, DateTime.Now, prioridad);
+                Singleton.Instance.Pacientes.UPHEAP(newPaciente, prioridad);
                 //agregar metodo add al heap 
 
                 return RedirectToAction(nameof(Index));
@@ -104,7 +105,8 @@ namespace LAB03_ED1_G.Controllers
                                 MIngreso = MetodoIngreso,
 
                             };
-                            //Singleton.Instance.AVL.Add(nuevoVehiculo); arreglar cuando este el heap
+                            //var edad= Paciente.CalcularEdad(nuevopaciente.FDNacimiento);
+                            //Singleton.Instance.Pacientes.UPHEAP(nuevopaciente, Paciente.Prioraty(nuevopaciente.Sexo, edad, nuevopaciente.Especializacion, nuevopaciente.MIngreso));// arreglar cuando este el heap
                         }
                     }
                 }
