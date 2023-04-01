@@ -4,10 +4,12 @@
     {
         public T Data { get; set; }
         public int Prioridad {get; set;}
-        public ColaPrioridadNode(T data, int prioridad)
+        private List<T> lista_misma_prioridad;
+        public ColaPrioridadNode(T data, int prioridad, List<T> list)
         {
             Data = data;
             Prioridad = prioridad;
+            lista_misma_prioridad = list;
         }
     }
 }

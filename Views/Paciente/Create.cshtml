@@ -8,18 +8,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato&family=Lora:wght@500&family=Noto+Serif&family=Quicksand:wght@500&display=swap" rel="stylesheet">
 
-@*<form asp-action="CargarArchivo" method="post" enctype="multipart/form-data">
-    <div class="mb-3">
-        <label for="formFile" class="form-label">Aqui se muestra el archivo  a importar</label>
-        <input type="file" name="postedFile" class="form-control" id="formFile" />
-    </div>
-    <div class="mb-2">
-        <center>
-            <input type="submit" value="Import" class="btn btn-danger" />
-        </center>
-        
-    </div>
-</form>*@
 <form asp-action="CargarArchivo" method="post" enctype="multipart/form-data" class="form-inline mb-3">
     <input class="form-control" type="file" name="File" />
     <input class="btn btn-outline-primary" type="submit" value="Importar" />

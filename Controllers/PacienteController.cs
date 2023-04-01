@@ -17,8 +17,8 @@ namespace LAB03_ED1_G.Controllers
         }
         public IActionResult Index()
         {
-            return View();
-            //return View(Singleton.Instance.Pacientes.GetList());      arreglar despues
+            //return View();
+            return View(Singleton.Instance.Pacientes.GetList());     // arreglar despues
         }
 
         public ActionResult Create() 
@@ -109,12 +109,12 @@ namespace LAB03_ED1_G.Controllers
                         }
                     }
                 }
-                return RedirectToAction(nameof(Create));
+                return RedirectToAction(nameof(Index));
             }
             catch (Exception)
             {
                 ViewData["Message"] = "Algo sucedio mal";
-                return RedirectToAction(nameof(Create));
+                return RedirectToAction(nameof(Index));
 
             }
         }
