@@ -95,6 +95,15 @@ namespace LAB03_ED1_G.Models
             }
             return Prioridad;
         }
-    
-}
+        public static int CalcularEdad(DateTime fecha)
+        {
+            DateTime hoy = DateTime.Today;
+            int años = hoy.Year - fecha.Year;
+
+            if (hoy < fecha.AddYears(años))
+                años--;
+
+            return años;
+        }
+    }
 }
