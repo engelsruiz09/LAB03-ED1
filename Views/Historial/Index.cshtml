@@ -21,31 +21,52 @@
                 </tr>
             </thead>
             <tbody>
-
-                @foreach (var item in Model)
+                @if (Model == null)
                 {
                     <tr>
                         <td>
-                            @Html.DisplayFor(modelItem => item.Nombres)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.Apellidos)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.FDNacimiento)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.Sexo)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.Especializacion)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.MIngreso)
                         </td>
                         <td>
                         </td>
                     </tr>
+                }
+                else
+                {
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Nombres)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Apellidos)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.FDNacimiento)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Sexo)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Especializacion)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MIngreso)
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                    }
                 }
             </tbody>
         </table>

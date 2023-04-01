@@ -29,11 +29,12 @@ namespace Clases
 
         public void UPHEAP(T data, int prioridad) //si el elemento es mas grande que su padre entonces se intercambian y se aplica para el padre, sino termina.
         {
+            List<T> lista = new List<T>();
             int indiceactual = heap.Count - 1;
             int indicepadre = (indiceactual - 1) / 2; //la posicion del padre es ( i - 1 )/2
 
             //segun el encolar se agrega un nuevo nodo al final del heap
-            var nuevonodo = new ColaPrioridadNode<T>(data, prioridad);
+            var nuevonodo = new ColaPrioridadNode<T>(data, prioridad, lista);
             heap.Add(nuevonodo);
 
             //segun las propiedades del heap hay que reorganizar para mantener la propiedad de prioridad
@@ -88,8 +89,16 @@ namespace Clases
             }
             return mayorprioridad;//y por ultimo retornamos el de mayor prioridad 
         }
+        public List<T> GetList()
+        {
+            List<T> lista = new List<T>();
+            foreach (var nodo in heap)
+            {
+                lista.Add(nodo.Data);
+            }
+            return lista;
+        }
 
-        
-        
+
     }
 }
