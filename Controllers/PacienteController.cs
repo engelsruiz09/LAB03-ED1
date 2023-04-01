@@ -45,7 +45,7 @@ namespace LAB03_ED1_G.Controllers
                 };
                 aux = Convert.ToDateTime(newPaciente.FDNacimiento);
                 edad = DateTime.Today.AddTicks(-aux.Ticks).Year - 1;
-                prioridad = newPaciente.Delegado(newPaciente.Sexo, edad, newPaciente.Especializacion, newPaciente.MIngreso);
+                prioridad = newPaciente.Delegado(newPaciente.Sexo, newPaciente.FDNacimiento, newPaciente.Especializacion, newPaciente.MIngreso);
                 Singleton.Instance.Pacientes.UPHEAP(newPaciente, prioridad);
                 //agregar metodo add al heap 
 
@@ -105,8 +105,7 @@ namespace LAB03_ED1_G.Controllers
                                 MIngreso = MetodoIngreso,
 
                             };
-                            //var edad= Paciente.CalcularEdad(nuevopaciente.FDNacimiento);
-                            //Singleton.Instance.Pacientes.UPHEAP(nuevopaciente, Paciente.Prioraty(nuevopaciente.Sexo, edad, nuevopaciente.Especializacion, nuevopaciente.MIngreso));// arreglar cuando este el heap
+                            Singleton.Instance.Pacientes.UPHEAP(nuevopaciente, Paciente.Prioraty(nuevopaciente.Sexo, nuevopaciente.FDNacimiento, nuevopaciente.Especializacion, nuevopaciente.MIngreso));// arreglar cuando este el heap
                         }
                     }
                 }
