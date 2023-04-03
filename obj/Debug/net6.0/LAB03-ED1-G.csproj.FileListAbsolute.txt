@@ -97,3 +97,31 @@ E:\Carlos\source\repos\Estructura de Datos I\LAB03-ED1\obj\Debug\net6.0\refint\L
 E:\Carlos\source\repos\Estructura de Datos I\LAB03-ED1\obj\Debug\net6.0\LAB03-ED1-G.pdb
 E:\Carlos\source\repos\Estructura de Datos I\LAB03-ED1\obj\Debug\net6.0\LAB03-ED1-G.genruntimeconfig.cache
 E:\Carlos\source\repos\Estructura de Datos I\LAB03-ED1\obj\Debug\net6.0\ref\LAB03-ED1-G.dll
+C:\Users\samer\Documents\GitHub\LAB03-ED1\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\samer\Documents\GitHub\LAB03-ED1\bin\Debug\net6.0\appsettings.json
+C:\Users\samer\Documents\GitHub\LAB03-ED1\bin\Debug\net6.0\Clases\obj\Clases.csproj.nuget.dgspec.json
+C:\Users\samer\Documents\GitHub\LAB03-ED1\bin\Debug\net6.0\Clases\obj\project.assets.json
+C:\Users\samer\Documents\GitHub\LAB03-ED1\bin\Debug\net6.0\LAB03-ED1-G.staticwebassets.runtime.json
+C:\Users\samer\Documents\GitHub\LAB03-ED1\bin\Debug\net6.0\LAB03-ED1-G.exe
+C:\Users\samer\Documents\GitHub\LAB03-ED1\bin\Debug\net6.0\LAB03-ED1-G.deps.json
+C:\Users\samer\Documents\GitHub\LAB03-ED1\bin\Debug\net6.0\LAB03-ED1-G.runtimeconfig.json
+C:\Users\samer\Documents\GitHub\LAB03-ED1\bin\Debug\net6.0\LAB03-ED1-G.dll
+C:\Users\samer\Documents\GitHub\LAB03-ED1\bin\Debug\net6.0\ref\LAB03-ED1-G.dll
+C:\Users\samer\Documents\GitHub\LAB03-ED1\bin\Debug\net6.0\LAB03-ED1-G.pdb
+C:\Users\samer\Documents\GitHub\LAB03-ED1\obj\Debug\net6.0\LAB03-ED1-G.csproj.AssemblyReference.cache
+C:\Users\samer\Documents\GitHub\LAB03-ED1\obj\Debug\net6.0\LAB03-ED1-G.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\samer\Documents\GitHub\LAB03-ED1\obj\Debug\net6.0\LAB03-ED1-G.AssemblyInfoInputs.cache
+C:\Users\samer\Documents\GitHub\LAB03-ED1\obj\Debug\net6.0\LAB03-ED1-G.AssemblyInfo.cs
+C:\Users\samer\Documents\GitHub\LAB03-ED1\obj\Debug\net6.0\LAB03-ED1-G.csproj.CoreCompileInputs.cache
+C:\Users\samer\Documents\GitHub\LAB03-ED1\obj\Debug\net6.0\LAB03-ED1-G.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\samer\Documents\GitHub\LAB03-ED1\obj\Debug\net6.0\LAB03-ED1-G.RazorAssemblyInfo.cache
+C:\Users\samer\Documents\GitHub\LAB03-ED1\obj\Debug\net6.0\LAB03-ED1-G.RazorAssemblyInfo.cs
+C:\Users\samer\Documents\GitHub\LAB03-ED1\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\samer\Documents\GitHub\LAB03-ED1\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\samer\Documents\GitHub\LAB03-ED1\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\samer\Documents\GitHub\LAB03-ED1\obj\Debug\net6.0\scopedcss\bundle\LAB03-ED1-G.styles.css
+C:\Users\samer\Documents\GitHub\LAB03-ED1\obj\Debug\net6.0\scopedcss\projectbundle\LAB03-ED1-G.bundle.scp.css
+C:\Users\samer\Documents\GitHub\LAB03-ED1\obj\Debug\net6.0\LAB03-ED1-G.dll
+C:\Users\samer\Documents\GitHub\LAB03-ED1\obj\Debug\net6.0\ref\LAB03-ED1-G.dll
+C:\Users\samer\Documents\GitHub\LAB03-ED1\obj\Debug\net6.0\LAB03-ED1-G.pdb
+C:\Users\samer\Documents\GitHub\LAB03-ED1\obj\Debug\net6.0\LAB03-ED1-G.genruntimeconfig.cache
