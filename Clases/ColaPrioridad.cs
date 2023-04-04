@@ -98,7 +98,14 @@ namespace Clases
             }
             return lista;
         }
-
+        public void Eliminacion()
+        {
+            if (IsEmpty())
+            {
+                throw new InvalidOperationException("La cola de prioridad se encuentra vacia");
+            }
+            heap.RemoveAt(0);
+        }
 
     }
 }

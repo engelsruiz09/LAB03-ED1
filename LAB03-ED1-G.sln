@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LAB03-ED1-G", "LAB03-ED1-G.csproj", "{4D2893BF-E02C-4DAE-A7EE-9C3C6775403E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LAB03-ED1-G", "LAB03-ED1-G.csproj", "{4D2893BF-E02C-4DAE-A7EE-9C3C6775403E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clases", "Clases\Clases.csproj", "{E689DC4A-750B-4DD1-8EDB-9F04ACE26FE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clases", "Clases\Clases.csproj", "{E689DC4A-750B-4DD1-8EDB-9F04ACE26FE4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

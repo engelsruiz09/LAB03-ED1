@@ -24,9 +24,21 @@ namespace LAB03_ED1_G.Controllers
 
         public ActionResult Delete()
         {
-            Singleton.Instance.Historial.Add(Singleton.Instance.Pacientes.GetList()[0]);
-            Singleton.Instance.Pacientes.DOWNHEAP();
-            return RedirectToAction(nameof(Index));
+            try
+            {
+                if (Singleton.Instance.Pacientes.IsEmpty())
+                {
+                    ViewData["Message"] = "No hay pacientes para atender";
+                }
+                Singleton.Instance.Pacientes.Eliminacion();
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception)
+            {
+                ViewData["Message"] = "Algo sucedio mal";
+                return RedirectToAction(nameof(Index));
+
+            }
         }
         public ActionResult Create() 
         { 
