@@ -8,12 +8,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato&family=Lora:wght@500&family=Noto+Serif&family=Quicksand:wght@500&display=swap" rel="stylesheet">
 
-<form asp-action="CargarArchivo" method="post" enctype="multipart/form-data" class="form-inline mb-3">
-    <input class="form-control" type="file" name="File" />
-    <input class="btn btn-outline-primary" type="submit" value="Importar" />
-</form>
 
-<body>
+
+<main>
+    <form asp-action="CargarArchivo" method="post" enctype="multipart/form-data" class="form-inline mb-3">
+        <input class="form-control" type="file" name="File" />
+        <input class="btn btn-outline-primary" type="submit" value="Importar" />
+    </form>
     <div>
         <div style="padding-left:50px; padding-right:50px;">
             <br />
@@ -92,5 +93,5 @@
     </div>
 
 
-</body>
+</main>
 

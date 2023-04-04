@@ -17,10 +17,17 @@ namespace LAB03_ED1_G.Controllers
         }
         public IActionResult Index()
         {
+
             //return View();
             return View(Singleton.Instance.Pacientes.GetList());     // arreglar despues
         }
 
+        public ActionResult Delete()
+        {
+            Singleton.Instance.Historial.Add(Singleton.Instance.Pacientes.GetList()[0]);
+            Singleton.Instance.Pacientes.DOWNHEAP();
+            return RedirectToAction(nameof(Index));
+        }
         public ActionResult Create() 
         { 
             return View();
