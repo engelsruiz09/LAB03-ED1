@@ -18,13 +18,13 @@ namespace LAB03_ED1_G.Controllers
         public IActionResult Index()
         {
 
-            //return View();
-            return View(Singleton.Instance.Pacientes.GetList());     // arreglar despues
+            var listaOrdenada = Singleton.Instance.Pacientes.GetListNoElimination().OrderByDescending(node => node.PrioridadModelo);
+            return View(listaOrdenada);
         }
 
         public ActionResult Delete()
         {
-            Singleton.Instance.Historial.Add(Singleton.Instance.Pacientes.GetList()[0]);
+            Singleton.Instance.Historial.Add(Singleton.Instance.Pacientes.GetListNoElimination()[0]);
             Singleton.Instance.Pacientes.DOWNHEAP();
             return RedirectToAction(nameof(Index));
         }
@@ -52,7 +52,8 @@ namespace LAB03_ED1_G.Controllers
                 };
                 aux = Convert.ToDateTime(newPaciente.FDNacimiento);
                 edad = DateTime.Today.AddTicks(-aux.Ticks).Year - 1;
-                prioridad = newPaciente.Delegado(newPaciente.Sexo, newPaciente.FDNacimiento, newPaciente.Especializacion, newPaciente.MIngreso);
+                prioridad = newPaciente.Delegado(newPaciente.Sexo, newPaciente.FDNacimiento, newPaciente.Especializacion, newPaciente.MIngreso, 0);
+                newPaciente.PrioridadModelo = prioridad;
                 Singleton.Instance.Pacientes.UPHEAP(newPaciente, prioridad);
                 //agregar metodo add al heap 
 
@@ -112,7 +113,9 @@ namespace LAB03_ED1_G.Controllers
                                 MIngreso = MetodoIngreso,
 
                             };
-                            Singleton.Instance.Pacientes.UPHEAP(nuevopaciente, Paciente.Prioraty(nuevopaciente.Sexo, nuevopaciente.FDNacimiento, nuevopaciente.Especializacion, nuevopaciente.MIngreso));// arreglar cuando este el heap
+                            int calculoPrioridad = Paciente.Prioraty(nuevopaciente.Sexo, nuevopaciente.FDNacimiento, nuevopaciente.Especializacion, nuevopaciente.MIngreso, 0);
+                            nuevopaciente.PrioridadModelo = calculoPrioridad;
+                            Singleton.Instance.Pacientes.UPHEAP(nuevopaciente, calculoPrioridad);// arreglar cuando este el heap
                         }
                     }
                 }

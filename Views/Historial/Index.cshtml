@@ -17,7 +17,7 @@
                     <th style="color:aliceblue">Sexo</th>
                     <th style="color:aliceblue">Especialización a utilizar</th>
                     <th style="color:aliceblue">Método de ingreso</th>
-                    <th style="color:aliceblue"> </th>
+                    <th style="color:aliceblue">Prioridad </th>
                 </tr>
             </thead>
             <tbody>
@@ -64,6 +64,7 @@
                                 @Html.DisplayFor(modelItem => item.MIngreso)
                             </td>
                             <td>
+                                @Html.DisplayFor(modelItem => item.PrioridadModelo)
                             </td>
                         </tr>
                     }

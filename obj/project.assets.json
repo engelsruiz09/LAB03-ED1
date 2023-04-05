@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "Clases/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Clases.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Clases.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Clases/1.0.0": {
+      "type": "project",
+      "path": "Clases/Clases.csproj",
+      "msbuildProject": "Clases/Clases.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "Clases >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\carlo\\.nuget\\packages\\": {},
@@ -39,7 +58,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\Carlos\\source\\repos\\Estructura de Datos I\\LAB03-ED1\\Clases\\Clases.csproj": {
+              "projectPath": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\LAB03-ED1\\Clases\\Clases.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

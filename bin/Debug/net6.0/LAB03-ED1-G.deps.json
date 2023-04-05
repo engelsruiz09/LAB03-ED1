@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
       "LAB03-ED1-G/1.0.0": {
+        "dependencies": {
+          "Clases": "1.0.0"
+        },
         "runtime": {
           "LAB03-ED1-G.dll": {}
+        }
+      },
+      "Clases/1.0.0": {
+        "runtime": {
+          "Clases.dll": {}
         }
       }
     }
   },
   "libraries": {
     "LAB03-ED1-G/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Clases/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
