@@ -24,8 +24,8 @@ namespace LAB03_ED1_G.Controllers
 
         public ActionResult Delete()
         {
-            Singleton.Instance.Historial.Add(Singleton.Instance.Pacientes.GetListNoElimination()[0]);
-            Singleton.Instance.Pacientes.DOWNHEAP();
+            Singleton.Instance.Historial.Add(Singleton.Instance.Pacientes.GetListNoElimination().OrderByDescending(node=>node.PrioridadModelo).ToList()[0]);
+            Singleton.Instance.Pacientes.DOWNHEAP(Singleton.Instance.Pacientes.GetListNoElimination().OrderByDescending(node => node.PrioridadModelo).ToList()[0]);
             return RedirectToAction(nameof(Index));
         }
         public ActionResult Create() 
@@ -33,6 +33,7 @@ namespace LAB03_ED1_G.Controllers
             return View();
         
         }
+
         [HttpPost]
         public ActionResult Create(IFormCollection collection)
         {

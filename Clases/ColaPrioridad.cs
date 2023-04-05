@@ -82,20 +82,29 @@ namespace Clases
 
 
 
-        public T DOWNHEAP()
+        public void DOWNHEAP(T nodoAEliminar)
         {
             if (IsEmpty())
             {
                 throw new InvalidOperationException("La cola de prioridad se encuentra vacia");
             }
 
-            int ultimoindice = heap.Count - 1;
-            T mayorprioridad = heap[ultimoindice].Data;
+            int indiceAEliminar = heap.FindIndex(n => n.Data.Equals(nodoAEliminar));
 
-            heap[0] = heap[ultimoindice];
+            if (indiceAEliminar == -1)
+            {
+                throw new ArgumentException("El nodo a eliminar no se encuentra en la cola de prioridad");
+            }
+
+            int ultimoindice = heap.Count - 1;
+
+            // Intercambiar el nodo a eliminar con el último nodo en la lista
+            Swap(indiceAEliminar, ultimoindice);
+
+            // Eliminar el último nodo en la lista
             heap.RemoveAt(ultimoindice);
 
-            int indiceactual = 0;
+            int indiceactual = indiceAEliminar;
             int indicehijoizquierdo = (indiceactual * 2) + 1;
             int indicehijoderecho = (indicehijoizquierdo * 2) + 2;
 
@@ -118,8 +127,6 @@ namespace Clases
                 indicehijoizquierdo = (indiceactual * 2) + 1;
                 indicehijoderecho = (indicehijoizquierdo * 2) + 2;
             }
-
-            return mayorprioridad;
         }
         public List<T> GetListNoElimination()
         {
@@ -128,8 +135,8 @@ namespace Clases
             {
                 lista.Add(nodo.Data);
             }
+            lista.Sort((x, y) => heap.FindIndex(n => n.Data.Equals(y)) - heap.FindIndex(n => n.Data.Equals(x)));
             return lista;
         }
-
     }
 }
