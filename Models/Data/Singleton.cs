@@ -14,5 +14,7 @@
 
         public Clases.ColaPrioridad<Paciente> Pacientes = new Clases.ColaPrioridad<Paciente>(); // instancia de nuestra clase generica heap contiene objetos de tipo paciente, Pacientes = almacenear una coleccion de pascientes
         public List<Paciente> Historial = new List<Paciente>(); // instancia de una lista generica de objetos de tipo paciente, Historial = una lista para almacenar el historial de pacientes en un orden.
+    
+    
     }
 }

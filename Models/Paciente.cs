@@ -5,7 +5,7 @@ namespace LAB03_ED1_G.Models
 {
     public class Paciente
     {
-        public delegate int Prioridad(string Sexo, DateTime? FechaNac, string Especializacion, string Ingreso);
+        public delegate int Prioridad(string Sexo, DateTime? FechaNac, string Especializacion, string Ingreso, int PrioridadModelo);
         [Display(Name = "Nombres")]
         [Required]
         public string Nombres { get; set; }
@@ -30,9 +30,13 @@ namespace LAB03_ED1_G.Models
         [Required]
         public string MIngreso { get; set; }
 
+        [Display(Name = "PrioridadModelo")]
+        [Required]
+        public int PrioridadModelo { get; set; }
+
         public Prioridad Delegado = new Prioridad(Prioraty); // creacion del delegado para el calculo de la prioridad
 
-        public static int Prioraty(string Sexo, DateTime? FechaNac, string Especializacion, string Ingreso)
+        public static int Prioraty(string Sexo, DateTime? FechaNac, string Especializacion, string Ingreso, int PrioridadModelo)
         {
             int edad=CalcularEdad(FechaNac);
             int Prioridad = 0;
@@ -113,6 +117,7 @@ namespace LAB03_ED1_G.Models
 
             return años;
         }
+
 
     }
 }

@@ -1,22 +1,24 @@
-Juan,Ramirez,9/7/2001,Masculino,Traumatología Interna,Ambulancia,,,,,,
-Julio,Chepe,9/3/2000,Masculino,Traumatología Expuesta,Asistido,,,,,,
-Ana,García,5/8/1983,Femenino,Ginecología,Ambulancia,,,,,,
-Jorge,Pérez,11/18/1977,Masculino,Cardiología,Asistido,,,,,,
-Sara,Jiménez,4/23/1990,Femenino,Neumología,Ambulancia,,,,,,
-Luis,Martínez,9/30/1985,Masculino,Traumatología Interna,Asistido,,,,,,
-María,Rodríguez,3/12/1978,Femenino,Traumatología Expuesta,Ambulancia,,,,,,
-Miguel,Ruiz,7/22/1995,Masculino,Ginecología,Asistido,,,,,,
-Lucía,Hernández,12/16/1980,Femenino,Cardiología,Ambulancia,,,,,,
-Juan,González,9/28/1975,Masculino,Neumología,Asistido,,,,,,
-Carla,Pérez,1/5/1990,Femenino,Traumatología Interna,Ambulancia,,,,,,
-Pedro,García,2/8/1983,Masculino,Traumatología Expuesta,Asistido,,,,,,
-Laura,Jiménez,12/2/1987,Femenino,Ginecología,Ambulancia,,,,,,
-Manuel,Martínez,7/11/1978,Masculino,Cardiología,Asistido,,,,,,
-Paula,Rodríguez,8/6/1985,Femenino,Neumología,Ambulancia,,,,,,
-Fernando,Ruiz,11/1/1992,Masculino,Traumatología Interna,Asistido,,,,,,
-Isabel,González,4/13/1983,Femenino,Traumatología Expuesta,Ambulancia,,,,,,
-Carlos,Hernández,9/12/1976,Masculino,Ginecología,Asistido,,,,,,
-Lorena,Pérez,1/9/1989,Femenino,Cardiología,Ambulancia,,,,,,
-Diego,García,8/3/1979,Masculino,Neumología,Asistido,,,,,,
-Julia,Jiménez,2/5/1984,Femenino,Traumatología Interna,Ambulancia,,,,,,
-Ricardo,Martínez,6/10/1991,Masculino,Traumatología Expuesta,Asistido,,,,,,
+
+Juan,Ramirez,09-07-2001,Masculino,Traumatologia interna,Ambulancia
+Julio,Chepe,09-03-2000,Masculino,Cardiologia,Asistido
+Manuel,Gomez,27-02-1987,Masculino,Neumologia,Asistido
+Ximena,Morales,14-11-2020,Femenino,Traumatologia expuesta,Asistido
+Alejandro,Garcia,02-03-1965,Masculino,Traumatologia interna,Asistido
+Brenda,Morales,03-02-2000,Femenino,Ginecologia,Ambulancia
+Ricardo,Vargas,07-09-1959,Masculino,Traumatologia expuesta,Ambulancia
+Lucia,Flores,06-05-2004,Femenino,Neumologia,Asistido
+Carolina,Ortiz,09-07-1975,Femenino,Ginecologia,Ambulancia
+Eduardo,Sanchez,14-08-1990,Masculino,Cardiologia,Ambulancia
+Fernando,Medina,07-01-1969,Masculino,Neumologia,Asistido
+Gabriela,Herrera,08-11-1983,Femenino,Neumologia,Ambulancia
+Laura,Ramirez,24-05-1993,Femenino,Traumatologia interna,Asistido
+Diana,Vargas,23-06-2017,Femenino,Cardiologia,Ambulancia
+Samuel,Contreras,29-12-1953,Masculino,Neumologia,Asistido
+Antonio,Castro,05-12-1976,Masculino,Cardiologia,Ambulancia
+Paola,Espinoza,12-01-2011,Femenino,Traumatologia expuesta,Ambulancia
+Claudia,Mendosa,09-10-2010,Femenino,Cardiologia,Asistido
+
+
+
+
+

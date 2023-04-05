@@ -125,3 +125,7 @@ C:\Users\samer\Documents\GitHub\LAB03-ED1\obj\Debug\net6.0\LAB03-ED1-G.dll
 C:\Users\samer\Documents\GitHub\LAB03-ED1\obj\Debug\net6.0\ref\LAB03-ED1-G.dll
 C:\Users\samer\Documents\GitHub\LAB03-ED1\obj\Debug\net6.0\LAB03-ED1-G.pdb
 C:\Users\samer\Documents\GitHub\LAB03-ED1\obj\Debug\net6.0\LAB03-ED1-G.genruntimeconfig.cache
+E:\Carlos\source\repos\Estructura de Datos I\LAB03-ED1\bin\Debug\net6.0\Clases\bin\Debug\net6.0\Clases.deps.json
+E:\Carlos\source\repos\Estructura de Datos I\LAB03-ED1\bin\Debug\net6.0\Clases.dll
+E:\Carlos\source\repos\Estructura de Datos I\LAB03-ED1\bin\Debug\net6.0\Clases.pdb
+E:\Carlos\source\repos\Estructura de Datos I\LAB03-ED1\obj\Debug\net6.0\LAB03-ED1-G.csproj.CopyComplete

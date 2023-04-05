@@ -7,16 +7,14 @@
 
 <body>
     <div style="padding-left:50px; padding-right:50px;">
-        <br />
-        <h4>Pacientes en espera</h4>
-
-        <a asp-action="Create">Agregar paciente</a>
-
-        <br />
+        <div class="container text-center">
+            <p class="display-1">Lista de Pacientes en Espera</p>
+        </div>
+        <hr/>
         <form asp-action="Delete" method="post">
-            <p align="right">
-                <button type="submit" class="btn btn-outline-success">Atender paciente</button>
-            </p>
+            <div align="center">
+                <button type="submit" class="btn btn-outline-success btn-lg btn-block">Atender paciente</button>
+            </div>
         </form>
         <br />
         <table class="table">
@@ -28,7 +26,7 @@
                     <th style="color:aliceblue">Sexo</th>
                     <th style="color:aliceblue">Especialización a utilizar</th>
                     <th style="color:aliceblue">Método de ingreso</th>
-                    <th style="color:aliceblue"> </th>
+                    <th style="color:aliceblue">Prioridad</th>
                 </tr>
             </thead>
             <tbody>
@@ -75,13 +73,14 @@
                                 @Html.DisplayFor(modelItem => item.MIngreso)
                             </td>
                             <td>
-                                @* @Html.ActionLink("Editar", "Edit", new {id = item.Nombres}) |*@
-                                @Html.ActionLink("Info", "Details", new { id = item.Nombres })
+                                @Html.DisplayFor(modelItem => item.PrioridadModelo)
                             </td>
                         </tr>
                     }
                 }
             </tbody>
         </table>
+        <a class="btn btn-primary my-3" asp-action="Create">Regresar a la carga de pacientes</a>
     </div>
+
 </body>
