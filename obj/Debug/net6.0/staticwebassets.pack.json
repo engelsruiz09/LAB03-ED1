@@ -5,28 +5,8 @@
       "PackagePath": "staticwebassets\\LAB03-ED1-G.bundle.scp.css"
     },
     {
-      "Id": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\LAB03-ED1\\wwwroot\\Uploads\\DATASETPACIENTES.csv",
-      "PackagePath": "staticwebassets\\Uploads\\DATASETPACIENTES.csv"
-    },
-    {
-      "Id": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\LAB03-ED1\\wwwroot\\Uploads\\DATASETPACIENTES.txt",
-      "PackagePath": "staticwebassets\\Uploads\\DATASETPACIENTES.txt"
-    },
-    {
-      "Id": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\LAB03-ED1\\wwwroot\\Uploads\\Laboratorio 2 - Datos de Ejemplo (1).csv",
-      "PackagePath": "staticwebassets\\Uploads\\Laboratorio 2 - Datos de Ejemplo (1).csv"
-    },
-    {
       "Id": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\LAB03-ED1\\wwwroot\\Uploads\\Laboratorio 3 - Datos de Ejemplo (1) (1).csv",
       "PackagePath": "staticwebassets\\Uploads\\Laboratorio 3 - Datos de Ejemplo (1) (1).csv"
-    },
-    {
-      "Id": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\LAB03-ED1\\wwwroot\\Uploads\\Laboratorio 3 - Datos de Ejemplo (1).csv",
-      "PackagePath": "staticwebassets\\Uploads\\Laboratorio 3 - Datos de Ejemplo (1).csv"
-    },
-    {
-      "Id": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\LAB03-ED1\\wwwroot\\Uploads\\Laboratorio 3 - Datos de Ejemplo.csv",
-      "PackagePath": "staticwebassets\\Uploads\\Laboratorio 3 - Datos de Ejemplo.csv"
     },
     {
       "Id": "E:\\Carlos\\source\\repos\\Estructura de Datos I\\LAB03-ED1\\wwwroot\\css\\site.css",
